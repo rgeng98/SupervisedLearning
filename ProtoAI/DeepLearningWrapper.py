@@ -2,7 +2,7 @@ import torch
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import torch.nn as nn
-import ProtoTorch.Networks.Builder as B
+import ProtoAI.Networks.Builder as B
 import logging
 from argparse import Namespace
 import numpy as np

@@ -1,4 +1,4 @@
-import ProtoTorch
+import ProtoAI
 import logging
 from pathlib import Path
 import sys
@@ -19,9 +19,9 @@ logging.basicConfig(
 
 
 if __name__ == "__main__":
-    args = ProtoTorch.ArgParser.parse_args()
+    args = ProtoAI.ArgParser.parse_args()
 
-    model = ProtoTorch.DeepLearningWrapper.Model(args)
+    model = ProtoAI.DeepLearningWrapper.Model(args)
 
     for _ in range(args.Epochs):
         model.training_epoch()
