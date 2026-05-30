@@ -1,0 +1,7 @@
+{
+    "Encoder":{
+        "in_channels": 3,
+        "layer_channels": [64, 128, 256, 512],
+        "latent_dim": 512
+    }
+}
