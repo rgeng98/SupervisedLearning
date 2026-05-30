@@ -1,4 +1,4 @@
-import GengAI.ArgParser
-import GengAI.DataLoader
-import GengAI.Networks
-import GengAI.DeepLearningWrapper
+import ProtoTorch.ArgParser
+import ProtoTorch.DataLoader
+import ProtoTorch.Networks
+import ProtoTorch.DeepLearningWrapper

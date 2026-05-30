@@ -1,2 +1,2 @@
-import GengAI.DataLoader.Image
-import GengAI.DataLoader.Numpy
+import ProtoTorch.DataLoader.Image
+import ProtoTorch.DataLoader.Numpy

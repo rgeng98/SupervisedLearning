@@ -1,4 +1,4 @@
-import GengAI.Networks.Modules.Complex
-import GengAI.Networks.Modules.Conv
-import GengAI.Networks.Modules.FC
-import GengAI.Networks.Modules.MixtureOfExperts
+import ProtoTorch.Networks.Modules.Complex
+import ProtoTorch.Networks.Modules.Conv
+import ProtoTorch.Networks.Modules.FC
+import ProtoTorch.Networks.Modules.MixtureOfExperts

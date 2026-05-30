@@ -1,6 +1,6 @@
 import torch.nn as nn
 from typing import Dict
-import GengAI.Networks.Modules as mod
+import ProtoTorch.Networks.Modules as mod
 import logging
 import json
 from pathlib import Path

@@ -1,5 +1,5 @@
-import GengAI.Networks.Modules.Conv.Residual
-import GengAI.Networks.Modules.Conv.Encoder
-import GengAI.Networks.Modules.Conv.Decoder
-import GengAI.Networks.Modules.Conv.Plain
-import GengAI.Networks.Modules.Conv.ToTransformer
+import ProtoTorch.Networks.Modules.Conv.Residual
+import ProtoTorch.Networks.Modules.Conv.Encoder
+import ProtoTorch.Networks.Modules.Conv.Decoder
+import ProtoTorch.Networks.Modules.Conv.Plain
+import ProtoTorch.Networks.Modules.Conv.ToTransformer

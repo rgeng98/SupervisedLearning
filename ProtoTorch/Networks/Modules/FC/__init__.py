@@ -1,3 +1,3 @@
-import GengAI.Networks.Modules.FC.Classifier
-import GengAI.Networks.Modules.FC.Residual
-import GengAI.Networks.Modules.FC.Transformer
+import ProtoTorch.Networks.Modules.FC.Classifier
+import ProtoTorch.Networks.Modules.FC.Residual
+import ProtoTorch.Networks.Modules.FC.Transformer

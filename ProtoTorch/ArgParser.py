@@ -5,8 +5,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Artificial Intelligence Model Rapid Prototyping Framework Default Argument Parser")
     
     # Define your arguments
-    parser.add_argument("-m", "--model_config", dest="ModelConfig", type=str, default="/mnt/c/Users/gengr/Documents/deep-learning/config/Model/NetworkConfiguration.json")
-    parser.add_argument("-t", "--training_data_dir", dest="TrainDir", type=str, default="/mnt/c/Users/gengr/Documents/deep-learning/Datasets/Training", help="Path to training dataset")
+    parser.add_argument("-m", "--model_config", dest="ModelConfig", type=str, default="config/Model/NetworkConfiguration.json")
+    parser.add_argument("-t", "--training_data_dir", dest="TrainDir", type=str, default="Datasets/Training", help="Path to training dataset")
     parser.add_argument("-v", "--validation_data_dir", dest="ValidationDir", type=str, default="/mnt/c/Users/gengr/Documents/deep-learning/Datasets/Testing", help="Path to validation dataset")
     parser.add_argument("-b", "--batch_size", dest="BatchSize", type=int, default=32, help="Input batch size for training")
     parser.add_argument("-e", "--epochs", dest="Epochs", type=int, default=10, help="Number of epochs to train")

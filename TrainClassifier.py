@@ -1,4 +1,4 @@
-import GengAI
+import ProtoTorch
 import logging
 from pathlib import Path
 import sys
@@ -19,9 +19,9 @@ logging.basicConfig(
 
 
 if __name__ == "__main__":
-    args = GengAI.ArgParser.parse_args()
+    args = ProtoTorch.ArgParser.parse_args()
 
-    model = GengAI.DeepLearningWrapper.Model(args)
+    model = ProtoTorch.DeepLearningWrapper.Model(args)
 
     for _ in range(args.Epochs):
         model.training_epoch()

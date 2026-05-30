@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from typing import Callable, Dict
 from pathlib import Path
-from GengAI.Networks.Modules.Conv import Plain
+from ProtoTorch.Networks.Modules.Conv import Plain
 
 class Mod(Plain.Mod):
     def __init__(self, in_channels=3, layer_channels=[32, 64, 128, 256, 512], latent_dim=1024):

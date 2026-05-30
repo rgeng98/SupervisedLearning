@@ -1,2 +1,2 @@
-import GengAI.Networks.Builder
-import GengAI.Networks.Modules
+import ProtoTorch.Networks.Builder
+import ProtoTorch.Networks.Modules
