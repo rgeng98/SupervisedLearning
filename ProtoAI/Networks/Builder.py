@@ -13,8 +13,10 @@ MODULES = {
     "RESIDUAL":             mod.FC.Residual.factory,
     "TRANSFORMER":          mod.FC.Transformer.factory,
     "CLASSIFIER":           mod.FC.Classifier.factory,
+    "MLP":                  mod.FC.MLP.factory,
     "CONVOLUTION":          mod.Conv.Plain.factory,
     "TOTRANSFORMER":        mod.Conv.ToTransformer.factory,
+    "TOLINEAR":             mod.Conv.ToLinear.factory,
     "RESIDUALCONVOLUTION":  mod.Conv.Residual.factory,
     "CONVOLUTIONALENCODER": mod.Conv.Encoder.factory,
     "CONVOLUTIONALDECODER": mod.Conv.Decoder.factory

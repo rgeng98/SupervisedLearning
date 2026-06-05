@@ -3,34 +3,32 @@
         "in_channels": 3,
         "layer_channels": [64, 128, 256],
         "kernel": [7, 5, 3],
-        "stride": [1, 1, 1],
+        "stride": [3, 3, 1],
         "padding": [3, 2, 1],
         "pooling": {
             "kernel": 2,
             "stride": 2
         }
     },
-    "totransformer": {
-        "n_channels": 256
+    "tolinear": {
+        "mode": "Conv"
     },
-    "transformer": {
-        "i_dim": 256,
+    "MLP": {
+        "i_dim": 702,
         "hidden_dim": 256,
-        "num_heads": 4,
-        "num_layers": 4
+        "num_layers": 1,
+        "o_dim": 256
     },
     "MoE": {
         "num_experts": 5,
         "top_k": 2,
-        "NestedMoE": {
-            "d_model": 256,
-            "d_hidden": 256
-        }
+        "d_model": 256,
+        "d_hidden": 256
     },
     "classifier": {
         "i_dim": 256,
         "hidden_dim": 256,
-        "num_layers": 2,
+        "num_layers": 1,
         "o_dim": 4
     }
 }

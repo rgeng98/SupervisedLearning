@@ -25,8 +25,9 @@ class MoELayer(nn.Module):
     def __init__(self, d_model: int, d_hidden: int, num_experts: int = 8, top_k: int = 2):
         super().__init__()
         self.num_experts = num_experts
-        self.top_k = top_k
-        
+        self.top_k       = top_k
+        self.input_norm  = nn.LayerNorm(d_model)
+
         # 1. Instantiate the pool of independent experts
         self.experts = nn.ModuleList([Expert(d_model, d_hidden) for _ in range(num_experts)])
         
@@ -38,8 +39,12 @@ class MoELayer(nn.Module):
         # Works perfectly for both 2D tabular/pooled data [batch, features] 
         # and 3D sequential text/vision data [batch, tokens/pixels, features]
         orig_shape = x.shape
+        y = x
         x = x.view(-1, orig_shape[-1]) # Flatten to 2D matrix: [total_tokens, d_model]
         
+        # Normalize inputs
+        x = self.input_norm(x)
+
         # Step 1: Compute gate logits and keep only the top_k options
         gate_logits = self.gate(x) # [total_tokens, num_experts]
         topk_weights, topk_indices = torch.topk(gate_logits, self.top_k, dim=-1)
@@ -69,7 +74,7 @@ class MoELayer(nn.Module):
                 final_output[token_mask] += weight[token_mask] * expert_out
                 
         # Restore output back to original 2D or 3D sequence dimension mapping
-        return final_output.view(*orig_shape)
+        return final_output.view(*orig_shape) + y
 
 class MoNE(MoELayer):
     def __init__(self, num_experts: int, top_k: int,  expert: Dict[str, int]):
